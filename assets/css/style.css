@@ -113,25 +113,36 @@ header {
 }
 
 main {
-  background: yellow;
   display: flex;
   flex-direction: row;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 
 footer {
   height: 100px;
   background: red;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 20px 25px;
 }
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 20px 25px;
+}
+
 #sidebar {
   width: 200px;
-  background: rgb(255, 0, 0);
+  background: #e0e0e0;
+  border-radius: 20px 0 0 20px;
 }
 #products {
   width: 100%;
   background: #f5f5f5;
-}
-
-hr {
+  border-radius: 0 20px 20px 0;
 }
