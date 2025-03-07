@@ -75,8 +75,6 @@ main {
   }
 }
 
-header {
-}
 .bovenbalk {
   background-color: rgb(255, 0, 0);
 }
@@ -145,4 +143,156 @@ footer {
   width: 100%;
   background: #f5f5f5;
   border-radius: 0 20px 20px 0;
+}
+
+.copyright {
+  margin: 100px auto 25px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.prijs {
+  border: 1px solid black;
+  margin: 20px 20px;
+  padding: 20px 20px;
+}
+
+.categorieen {
+  border: 1px solid black;
+  margin: 20px 20px;
+  padding: 30px 30px;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 9px 20px 0px rgba(14, 88, 48, 0.1);
+}
+
+.price-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.range-slider {
+  width: 400px;
+  position: relative;
+  margin: 15px 0 30px 0;
+}
+
+.range-fill {
+  height: 6px;
+  background-color: #36b37e;
+  position: absolute;
+}
+
+/* ------------------------------------- */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #808080;
+  padding: 25px;
+}
+
+.container form {
+  width: 700px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+form .row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.row .column {
+  gap: 15px;
+  margin: 15px;
+}
+
+.column .title {
+  font-size: 20px;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.column .input-box {
+  margin: 15px 0;
+}
+
+.input-box span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.column .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.flex .input-box {
+  margin-top: 5px;
+}
+
+.input-box img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+form .btn {
+  width: 100%;
+  padding: 12px;
+  background: #8175d3;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 17px;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+form .btn:hover {
+  background: #6a5acd;
 }
