@@ -296,3 +296,91 @@ form .btn {
 form .btn:hover {
   background: #6a5acd;
 }
+
+/*----------------------*/
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ddd;
+}
+
+.navbar {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 14px 16px;
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #031d44;
+  padding: 20px 15px;
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+/* Restore hover effect with red underline */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 5px;
+  width: 0%;
+  bottom: 5px; /* Adjusted for better alignment */
+  left: 0;
+  transition: width 300ms ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Dropdown styling */
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1;
+  display: none;
+  background: white;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+}
+
+.content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
