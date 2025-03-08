@@ -87,16 +87,77 @@ main {
 
 .onderbalk {
   background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between; /* Spread out items */
+  align-items: center; /* Align items vertically */
+  padding: 15px 20px; /* Add some padding for spacing */
 }
 
 .onderbalk img {
   width: 50px;
-  margin: 5px;
+  margin-left: 120px;
   padding: 10px;
 }
 
-.onderbalk .usermenu {
-  margin: 10px;
+.navbar {
+  display: flex;
+  gap: 25px; /* Added space between navbar items */
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .nav-link {
+  padding: 10px 15px; /* Adjust padding for links */
+}
+
+/* Search bar */
+.searchbar {
+  flex-grow: 1; /* Make searchbar take up remaining space */
+  max-width: 500px; /* Ensure the max width is controlled */
+  margin-left: 20px; /* Add space between navbar and search bar */
+}
+
+.searchbar input {
+  width: 100%; /* Full width of parent container */
+  padding: 15px; /* Increase padding for a larger input field */
+  border-radius: 30px; /* Rounded corners */
+  border: 1px solid #ddd;
+  background-color: #f5f5f5; /* Light background */
+}
+
+/* User menu */
+.usermenu {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.menuLeft {
+  display: flex;
+  align-items: center;
+}
+
+.menuLeft svg {
+  height: 24px;
+  width: 24px;
+}
+
+.menuLeft:first-child {
+  padding-left: 0;
+}
+
+.menuLeft:last-child {
+  padding-right: 0;
+}
+
+.menuLeft {
+  padding: 0 10px; /* Space between menu items */
+}
+
+input::placeholder {
+  color: #666666; /* You can replace 'red' with any color you like */
 }
 
 .searchbar input {
