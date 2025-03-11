@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Range Slider</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+
+      .slider-container {
+        width: 300px;
+        margin: auto;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 8px;
+        background: #ddd;
+        border-radius: 5px;
+        outline: none;
+        opacity: 0.9;
+        transition: opacity 0.15s;
+      }
+
+      input[type="range"]:hover {
+        opacity: 1;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #4caf50;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .price-output {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Price Range</h2>
+    <div class="slider-container">
+      <input
+        type="range"
+        id="priceRange"
+        min="0"
+        max="1000"
+        value="500"
+        step="10"
+        oninput="updatePrice(this.value)"
+      />
+      <div class="price-output">$<span id="priceValue">500</span></div>
+    </div>
+
+    <script>
+      function updatePrice(value) {
+        document.getElementById("priceValue").textContent = value;
+      }
+    </script>
+  </body>
+</html>
