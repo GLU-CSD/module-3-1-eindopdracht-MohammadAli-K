@@ -441,3 +441,46 @@ body {
 .dropdown:hover .content {
   display: block;
 }
+
+/* -------------- Bestelformulier ------------------- */
+
+.volledigenaam {
+  display: flex;
+}
+
+.volledigenaam .naam {
+  margin-right: 5px;
+}
+
+.naam span {
+  margin-bottom: 5px;
+}
+
+.naam {
+  display: flex;
+  flex-direction: column;
+}
+
+.aanhef {
+  margin: 5px 0;
+}
+
+.adres {
+  display: flex;
+}
+
+.straatnaam {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 0 0;
+}
+.huisnummer {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 0 0;
+}
+.postcode {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 0 0;
+}
