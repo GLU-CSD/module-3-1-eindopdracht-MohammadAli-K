@@ -410,22 +410,21 @@ body {
 
 /* -------------- Bestelformulier ------------------- */
 
+form,
+h3 {
+  margin: 20px 0 50px 0;
+}
+
 .volledigenaam {
   display: flex;
+  margin: 10px 5px 10px 0;
 }
 
-.volledigenaam .naam {
-  margin-right: 5px;
-}
-
-.naam span {
-  margin-bottom: 5px;
-  display: inline;
-}
-
-.naam {
-  display: flex;
-  flex-direction: column;
+.voornaam,
+.tussenvoegsel,
+.achternaam label,
+input {
+  margin: 5px 5px 10px 0;
 }
 
 .aanhef {
@@ -455,11 +454,15 @@ body {
 .land {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin: 10px 0 5px 0;
 }
 
 .land select {
-  margin-top: 5px;
+  margin: 5px 0 10px 0;
+}
+
+.algemenevoorwaarden {
+  margin: 50px 0;
 }
 
 .voorwaarden-highlight {
