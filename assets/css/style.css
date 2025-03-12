@@ -27,12 +27,14 @@ body {
   background-color: white;
   border-radius: 20px;
   margin: 6px;
-  padding: 10px;
+  padding: 40px;
 }
 
 .onder {
   display: flex;
   flex-direction: row;
+  padding: 20px;
+  justify-content: center;
 }
 
 .onderlinks {
@@ -43,6 +45,7 @@ body {
   height: 100px;
   justify-content: space-between;
   align-items: left;
+  padding: 20px 30px;
 }
 .onderrechts {
   display: flex;
@@ -50,13 +53,24 @@ body {
   background: #f5f5f5;
   justify-content: center;
   align-items: center;
+  padding: 10px 10px;
+}
+
+.product-titel,
+.product-beschrijving {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  display: inline;
 }
 
 .product img {
   width: 100%;
   border: 2px solid black;
   box-sizing: border-box;
-  background: green;
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 840px) {
@@ -446,6 +460,15 @@ body {
 
 .land select {
   margin-top: 5px;
+}
+
+.voorwaarden-highlight {
+  color: #3385ff;
+}
+
+button,
+.verzend-knop {
+  padding: 0 50% 0 5px;
 }
 
 /* -------------------- range slider -------------------- */
