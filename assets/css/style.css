@@ -20,7 +20,9 @@ body {
   flex-wrap: wrap;
   width: 80%;
   background: #f5f5f5;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  margin-left: 150px;
 }
 
 .onder {
@@ -35,13 +37,13 @@ body {
   flex-direction: column;
   background: #f1f1f1;
   width: 100%;
-  padding: 20px; /* Adjusted padding for better spacing */
-  border-radius: 10px; /* Slight rounding for aesthetics */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .onderlinks h3,
 .onderlinks p {
-  margin-bottom: 8px; /* Added slight margin to separate text */
+  margin-bottom: 8px;
 }
 
 .onderrechts {
@@ -49,21 +51,21 @@ body {
   justify-content: center;
   align-items: center;
   background: #f5f5f5;
-  padding: 15px; /* Reduced padding slightly */
+  padding: 15px;
   border-radius: 10px;
 }
 
 .onderrechts button {
-  padding: 10px 15px; /* Adjusted padding to fit well */
-  margin: 5px; /* Added margin for slight spacing */
+  padding: 10px 15px;
+  margin: 5px;
 }
 
 .product {
-  width: 160px; /* Reduced width slightly for better proportions */
+  width: 160px;
   background-color: white;
-  border-radius: 15px; /* Kept smooth edges */
-  margin: 5px; /* Slightly reduced margin */
-  padding: 25px; /* Reduced padding to remove excess space */
+  border-radius: 15px;
+  margin: 5px;
+  padding: 25px;
 }
 
 .product img {
@@ -71,7 +73,7 @@ body {
   border: 2px solid black;
   box-sizing: border-box;
   display: block;
-  margin-top: 10px; /* Ensured space between text and image */
+  margin-top: 10px;
 }
 
 .product-titel,
@@ -97,23 +99,14 @@ body {
   margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 840px) {
-  body {
-    background-color: lightblue;
-  }
-  #content {
-    width: 600px;
-  }
-  #sidebar {
-    display: none;
-  }
-}
-
 .bovenbalk {
   background-color: rgb(255, 0, 0);
 }
 .bovenbalk .menuRight {
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .bovenbalk .menuLeft {
   padding: 10px;
@@ -122,9 +115,9 @@ body {
 .onderbalk {
   background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-between; /* Spread out items */
-  align-items: center; /* Align items vertically */
-  padding: 15px 20px; /* Add some padding for spacing */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
 }
 
 .onderbalk img {
@@ -135,7 +128,7 @@ body {
 
 .navbar {
   display: flex;
-  gap: 25px; /* Added space between navbar items */
+  gap: 25px;
 }
 
 .navbar .dropdown {
@@ -143,29 +136,29 @@ body {
 }
 
 .navbar .nav-link {
-  padding: 10px 15px; /* Adjust padding for links */
+  padding: 10px 15px;
 }
 
 /* Search bar */
 .searchbar {
-  flex-grow: 1; /* Make searchbar take up remaining space */
-  max-width: 500px; /* Ensure the max width is controlled */
-  margin-left: 20px; /* Add space between navbar and search bar */
+  flex-grow: 1;
+  max-width: 500px;
+  margin-left: 20px;
 }
 
 .searchbar input {
-  width: 100%; /* Full width of parent container */
-  padding: 15px; /* Increase padding for a larger input field */
-  border-radius: 30px; /* Rounded corners */
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
   border: 1px solid #ddd;
-  background-color: #f5f5f5; /* Light background */
+  background-color: #f5f5f5;
 }
 
 /* User menu */
 .usermenu {
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between icons */
+  gap: 20px;
 }
 
 .menuLeft {
@@ -187,11 +180,11 @@ body {
 }
 
 .menuLeft {
-  padding: 0 10px; /* Space between menu items */
+  padding: 0 10px;
 }
 
 input::placeholder {
-  color: #666666; /* You can replace 'red' with any color you like */
+  color: #666666;
 }
 
 .searchbar input {
@@ -230,11 +223,119 @@ footer {
   flex-direction: row;
   padding: 20px 25px;
 }
+/* -----------Sidebar--------------*/
 
 #sidebar {
-  width: 200px;
-  background: #969494;
-  border-radius: 20px 0 0 20px;
+  background: #151718;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  transition: left 0.3s linear;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+#sidebar.visible {
+  left: 0;
+}
+
+ul li a {
+  background: #1c1e1f;
+  color: #ccc;
+  border-bottom: 1px solid #111;
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  background: #1c1e1f;
+  color: #ccc;
+  border-bottom: 1px solid #111;
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header,
+footer,
+.info {
+  transition: margin-left 0.3s linear;
+}
+
+.shift-right {
+  margin-left: 250px;
+}
+
+.price-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.prijs-titel {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.slider-container {
+  text-align: center;
+  width: 100%;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.price-output {
+  margin-top: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+#sidebar-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: -40px;
+}
+
+#sidebar-btn span {
+  height: 3px;
+  background: #000;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#sidebar-btn span:nth-child(2) {
+  width: 75%;
+}
+
+#sidebar-btn span:nth-child(3) {
+  width: 50%;
 }
 
 .copyright {
@@ -251,14 +352,6 @@ a:hover {
   text-decoration: underline;
   color: blue;
 }
-
-.categorieen {
-  border: 1px solid black;
-  margin: 20px 20px;
-  padding: 30px 30px;
-}
-
-/* ------------------------------------- */
 
 .container {
   display: flex;
@@ -344,7 +437,7 @@ form .btn:hover {
   background: #6a5acd;
 }
 
-/*----------------------*/
+/* -------------- Navbar ------------------- */
 
 body {
   padding: 0;
@@ -382,14 +475,13 @@ body {
   opacity: 0.75;
 }
 
-/* Restore hover effect with red underline */
 .nav-link::before {
   content: "";
   position: absolute;
   background-color: red;
   height: 5px;
   width: 0%;
-  bottom: 5px; /* Adjusted for better alignment */
+  bottom: 5px;
   left: 0;
   transition: width 300ms ease-in-out;
 }
@@ -402,7 +494,6 @@ body {
   opacity: 1;
 }
 
-/* Dropdown styling */
 .content {
   position: absolute;
   top: 100%;
@@ -432,12 +523,11 @@ body {
   display: block;
 }
 
-/* Hide the navbar items on smaller screens by default */
 .navbar {
   display: flex;
   justify-content: start;
   padding: 10px;
-  flex-wrap: wrap; /* Allows wrapping in smaller screens */
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -463,7 +553,6 @@ body {
   opacity: 0.75;
 }
 
-/* Hide dropdown content by default */
 .content {
   position: absolute;
   top: 100%;
@@ -493,27 +582,25 @@ body {
   display: block;
 }
 
-/* Hamburger icon */
 #hamburger-icon {
-  display: none; /* Hide hamburger by default */
+  display: none;
   font-size: 30px;
   cursor: pointer;
 }
 
-/* Show the hamburger icon and hide the regular navbar items for smaller screens */
 @media only screen and (max-width: 768px) {
   .navbar {
-    display: none; /* Hide navbar links by default */
+    display: none;
     flex-direction: column;
     width: 100%;
   }
 
   .navbar.active {
-    display: flex; /* Show navbar links when active class is added */
+    display: flex;
   }
 
   #hamburger-icon {
-    display: block; /* Show hamburger icon */
+    display: flex;
   }
 
   .navbar .dropdown {
@@ -523,15 +610,35 @@ body {
   .nav-link {
     padding: 10px 15px;
     width: 100%;
-    text-align: left; /* Align text to the left */
+    text-align: left;
   }
 
   .content {
-    width: 100%; /* Make the dropdown items full width */
+    width: 100%;
   }
 }
 
-/* -------------- Bestelformulier ------------------- */
+@media only screen and (max-width: 840px) {
+  body {
+    background-color: lightblue;
+  }
+  #content {
+    width: 600px;
+  }
+  #sidebar {
+    display: none;
+  }
+
+  .searchbar {
+    margin-right: 50px;
+  }
+
+  .usermenu {
+    margin-left: 60px;
+  }
+}
+
+/* ---------------- Bestelformulier ----------------- */
 
 form,
 h3 {
@@ -595,10 +702,4 @@ input {
 button,
 .verzend-knop {
   padding: 0 50% 0 5px;
-}
-
-/* -------------------- range slider -------------------- */
-
-.slidecontainer {
-  margin-left: 20px;
 }
