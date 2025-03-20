@@ -223,6 +223,10 @@ footer {
   flex-direction: row;
   padding: 20px 25px;
 }
+
+.klantenservice a {
+  text-decoration-line: none;
+}
 /* -----------Sidebar--------------*/
 
 #sidebar {
@@ -250,7 +254,7 @@ ul li a {
   display: block;
   width: calc(100% - 20px);
   padding: 10px;
-  text-decoration: none;
+  text-decoration-line: none;
   text-align: center;
   box-sizing: border-box;
 }
@@ -702,4 +706,10 @@ input {
 button,
 .verzend-knop {
   padding: 0 50% 0 5px;
+}
+
+/* ----------------- Social Media links ----------------- */
+
+.info a {
+  text-decoration-line: none;
 }
